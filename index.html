@@ -1,0 +1,62 @@
+
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc mừng emiu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="gift-box" onclick="openGift()">
+        <div class="lid"></div>
+        <div class="box_body"></div>
+    </div>
+
+    <h1 id="greeting">HAPPY HAPPY 20/10🥳 <span>Người xinh nhất💐</span></h1>
+
+    <div class="heart-container" id="heartContainer">
+        <div class="heart">
+            <div class="heart-text"><br>Hải Vân💖</br></div>
+        </div>
+
+        <!-- Pháo hoa -->
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+    </div>
+
+    <div class="footer-text" id="footerText">Chúc công chúa sẽ mãi xinh đẹp, giỏi giang và luôn hạnh phúc ❤️🙆 <br> I LOVE YOU 💗 </br>  </div>
+
+    <script>
+        function openGift() {
+            const giftBox = document.querySelector('.gift-box');
+            const heartContainer = document.getElementById('heartContainer');
+            const greeting = document.getElementById('greeting');
+            const footerText = document.getElementById('footerText');
+            
+            // Mở hộp quà
+            giftBox.classList.add('open');
+    
+            // Hiển thị nội dung sau khi mở hộp
+            setTimeout(() => {
+                heartContainer.style.display = 'flex';
+                heartContainer.style.justifyContent = 'center';
+                heartContainer.style.alignItems = 'center';
+                heartContainer.style.height = '100vh';
+                heartContainer.style.flexDirection = 'column';
+                
+                setTimeout(() => {
+                    heartContainer.style.opacity = '1';
+                    greeting.style.opacity = '1';
+                    footerText.style.opacity = '1';
+                }, 100);
+            }, 500);
+        }
+    </script>
+    
+</body>
+</html>
